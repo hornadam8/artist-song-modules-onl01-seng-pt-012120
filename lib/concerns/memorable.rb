@@ -1,12 +1,20 @@
 require 'pry'
 module Memorable
   
-  def reset_all
-    self.all.clear
+  module ClassMethods
+    
+    def reset_all
+      self.all.clear
+    end
+  
+    def count
+      self.all.count
+    end
+    
   end
   
-   def count
-    self.all.count
-  end
+  module InstanceMethods
+    
+    def initialize
   
 end
